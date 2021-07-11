@@ -1,0 +1,13 @@
+version: "3"
+services:
+  vue3_tutorial:
+    build: .
+    container_name: vue3_tutorial
+    tty: true
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    command: >
+      ash -c "yarn install &&
+      yarn serve"
