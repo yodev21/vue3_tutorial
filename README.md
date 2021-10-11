@@ -14,7 +14,9 @@ http://localhost:8080/
 # router リポジトリに切り替え
 
 ```bash
-git checkout feature/router
+git checkout -b feature/router
+
+git pull origin feature/router
 
 docker-compose build
 
