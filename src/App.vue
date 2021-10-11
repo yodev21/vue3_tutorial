@@ -1,26 +1,55 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <div>
+      <router-link
+        to="/"
+        class="btn btn-primary mx-2">
+        Go to Top
+      </router-link>
+      <router-link
+        to="/jsx"
+        class="btn btn-warning mx-2">
+        Go to JSX
+      </router-link>
+      <router-link
+        to="/multiple"
+        class="btn btn-danger mx-2">
+        Go to multiple
+      </router-link>
+      <router-link
+        to="/params/Bob"
+        class="btn btn-outline-primary mx-2">
+        Go to params
+      </router-link>
+      <router-link
+        :to="{name: 'params_object', params: {name: 'Alice'}}"
+        class="btn btn-outline-warning mx-2">
+        Go to params_object
+      </router-link>
+      <hr>
+      <h5>default view</h5>
+      <!-- routerオブジェクトで割り当ててあるコンポーネントを組み立てて表示 -->
+      <router-view />
+
+      <!-- 名前付きビューの利用 -->
+      <router-view name="first"></router-view>
+      <router-view name="second"></router-view>
+    </div>
+  </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  name: 'app',
+  created(){
+    console.log("***** App Created! ******")
+  },
+  mounted(){
+    console.log("----- App Mounted! -----")
+  },
+  data(){
+    return {
+      title: 'Router'
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

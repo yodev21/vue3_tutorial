@@ -8,11 +8,11 @@
 <script>
 import { reactive } from 'vue'
 export default {
-  name: 'HelloWorld',
+  name: 'Multiple',
   setup(){
     const data = reactive({
-      title: 'HelloWorld',
-      msg: 'This is HelloWorld component .',
+      title: 'Multiple',
+      msg: 'This is Multiple component .',
     })
 
     return {
