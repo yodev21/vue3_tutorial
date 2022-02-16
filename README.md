@@ -18,5 +18,6 @@ TeleportはコンポーネントをDOMツリーの別の場所にレンダリン
 https://re-engines.com/2020/11/02/vue3-teleport/
 
 # SFC
+コンポーネントの状態に応じてスタイルを動的に更新する機能です。
 
 https://github.com/vuejs/rfcs/pull/231
