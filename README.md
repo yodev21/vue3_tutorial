@@ -12,5 +12,12 @@ docker-compose up
 http://localhost:8080/
 
 # Teleportについて
-使用用途として、モーダルなど入れ子になったコンポーネントの中に表示するのではなく、 
-body の直下のような、他のコンポーネントとは独立した所に配置される方が都合が良いです。
+TeleportはコンポーネントをDOMツリーの別の場所にレンダリングすることができます。
+
+使用用途として、モーダルなどz-indexの問題や親要素のstyleが干渉してしまう問題に対応可能です。
+https://re-engines.com/2020/11/02/vue3-teleport/
+
+# SFC
+コンポーネントの状態に応じてスタイルを動的に更新する機能です。
+
+https://github.com/vuejs/rfcs/pull/231
